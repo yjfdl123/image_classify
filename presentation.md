@@ -7,6 +7,8 @@
 The overall architecture of the system includes 4 parts: client, webserver, model API, database.<br>
 In order to develop the system quickly, we use flask to process web requests and sqlite to store data.<br>
 To reduce model complexity, we use mobilenet for image prediction.<br>
+The system architecture diagram is as follows.<br>
+![image](https://github.com/yjfdl123/image_classify/blob/main/data/images/architecture_of_image_classify.png)
 
 # System implementation details
 ## Webserver API
