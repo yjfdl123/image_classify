@@ -7,10 +7,18 @@
 The overall architecture of the system includes 4 parts: client, webserver, model API, database.<br>
 In order to develop the system quickly, we use flask to process web requests and sqlite to store data.<br>
 To reduce model complexity, we use mobilenet for image prediction.<br>
-The system architecture diagram is as follows.<br>
 ![image](https://github.com/yjfdl123/image_classify/blob/main/data/images/architecture_of_image_classify.png)
 
 # System implementation details
+## Code Structure
+1. The service api related code is in the file server.py.
+2. Model training related code is in the file model.py.
+3. The database operation related code is in the file db_wrap.py. 
+4. The code related to the client api operation is in the file clien.py. 
+5. External control variables in file config.py.
+![image](https://github.com/yjfdl123/image_classify/blob/main/data/images/code_of_all_server.png.png)
+
+
 ## Webserver API
 We use flask as webserver and provide 5 routes.<br>
 1. /metadata route that
@@ -27,13 +35,9 @@ previous /train route, and saves a copy of model output and metrics in database.
 a. Returns all predictions history saved in the database.
 5. /upload_image route thant 
 a. upload image with label to train the model
+![image](https://github.com/yjfdl123/image_classify/blob/main/data/images/code_of_webserver.png)
 
-## Code Structure
-1. The service api related code is in the file server.py.
-2. Model training related code is in the file model.py.
-3. The database operation related code is in the file db_wrap.py. 
-4. The code related to the client api operation is in the file clien.py. 
-5. External control variables in file config.py.
+
 
 
 ## Dababase API
@@ -58,9 +62,11 @@ The schema of the table is as follows. <br>
 3. insert_image_score is used to record the historical score of the image
 4. select_model_version is used to query all model version information
 5. select_image_score is used to query the historical score of the image
+![image](https://github.com/yjfdl123/image_classify/blob/main/data/images/code_of_database.png)
 
 ## Model API 
 We use lightweight mobilenet to classify images.
 1. load_model is used to initialize the model. 
 2. predict_image is used to classify uploaded images. 
 3. finetune_model is used to fine-tune the model.
+![image](https://github.com/yjfdl123/image_classify/blob/main/data/images/code_of_model_api.png)
