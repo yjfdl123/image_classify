@@ -95,8 +95,7 @@ def get_history():
             print("user_image:", user_image)
             lst_image_path.append(user_image )
 
-        user_image = os.path.join(app.config['UPLOAD_FOLDER'], '07.jpg')
-        return render_template('tables.html',  name="yjf", lst_score = lst_score, user_image = user_image, lst_image_name=lst_image_path)
+        return render_template('tables.html',  name="yjf", lst_score = lst_score, lst_image_name=lst_image_path)
     return flask.jsonify(result)
 
  

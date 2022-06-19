@@ -35,6 +35,13 @@ We have prepared a client tool to interact with the server.
 - python3 client.py predict  your_path_image
 - python3 client.py upload_image your_path_image label(OK|NEG)
 
+# How To Modify Server Config
+- The configuration of the service is modified by the following files. config.py
+![image](https://github.com/yjfdl123/image_classify/blob/main/data/images/config_server.png)
+
+
+
+
 # Web History 
 - The display pictures of the web site are as follows
-![image]()
+![image](https://github.com/yjfdl123/image_classify/blob/main/data/images/history_image.png)
