@@ -1,0 +1,4 @@
+flask
+pillow
+flask_bootstrap
+flask_login
