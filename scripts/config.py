@@ -9,5 +9,6 @@ DIR_UPLOAD_DATA = DIR_DATA + "/upload_data"
 DIR_PREDICT_DATA = DIR_DATA + "/predict_data"
 DIR_DATABASE = DIR_DATA + "/database"
 DIR_TEMPLATE = DIR_DATA + "/templates"
+DIR_STATIC_IMG = DIR_ROOT + "/scripts/static/upload_image"
 
 ## DONT MODIFY

@@ -16,7 +16,7 @@ To reduce model complexity, we use mobilenet for image prediction.<br>
 3. The database operation related code is in the file db_wrap.py. 
 4. The code related to the client api operation is in the file clien.py. 
 5. External control variables in file config.py.
-![image](https://github.com/yjfdl123/image_classify/blob/main/data/images/code_of_all_server.png.png)
+![image](https://github.com/yjfdl123/image_classify/blob/main/data/images/code_of_all_server.png)
 
 
 ## Webserver API

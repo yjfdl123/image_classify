@@ -5,14 +5,14 @@ The official website of docker is as follows https://docs.docker.com/desktop/mac
 ## 2. Start Containers 
 ### Choose Local Path
 1. Download the compressed file in the mail and extract it to a local directory.
-2. e.g. My local directory is /Users/yangjiangfeng/01_icode/leetcode/baidu/personal-code/homework_yjf/scripts. 
+2. e.g. My local directory is /Users/yangjiangfeng/Desktop/local_code/image_classify. 
 
 ### start container
 1. When starting the container, associate the local path with the path inside the container, use -v.
 2. Associate the ip of the container with the ip of the local machine, use -p
 3. Start the container with the following command.
 
-4. docker run -it -v /Users/yangjiangfeng/01_icode/leetcode/baidu/personal-code/homework_yjf:/program -d -p 5000:5000 --net host --cap-add NET_ADMIN --name tf_yjf --rm tensorflow/tensorflow bash 
+4. docker run -it -v /Users/yangjiangfeng/Desktop/local_code/image_classify:/program -d -p 5000:5000 --net host --cap-add NET_ADMIN --name tf_yjf --rm tensorflow/tensorflow bash 
 
 ## 3.Init Enviroment
 - Init enviroment by running the command. 
@@ -35,5 +35,6 @@ We have prepared a client tool to interact with the server.
 - python3 client.py predict  your_path_image
 - python3 client.py upload_image your_path_image label(OK|NEG)
 
-
-
+# Web History 
+- The display pictures of the web site are as follows
+![image]()

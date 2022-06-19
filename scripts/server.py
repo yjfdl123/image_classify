@@ -48,9 +48,13 @@ def predict():
         upload_file = request.files['file']
         file_name = upload_file.filename
         save_dir = config.DIR_PREDICT_DATA 
+        static_dir = config.DIR_STATIC_IMG
         if upload_file:
             save_path = os.path.join(save_dir, file_name)
             upload_file.save(save_path)
+            static_save_path = os.path.join(static_dir, file_name)
+            print("savepath:", static_save_path)
+            upload_file.save(static_save_path)
             model_name, model_version, prob = model_agent.predict_image(save_path)
             result['predictions'] = [str(prob)]
             result['success'] = True
@@ -85,9 +89,14 @@ def get_history():
         result['result'] = lst_score
         result['op'] = "history"
         result['success'] = True
+        lst_image_path = []
+        for name in lst_image_name:
+            user_image = os.path.join(app.config['UPLOAD_FOLDER'], name)
+            print("user_image:", user_image)
+            lst_image_path.append(user_image )
 
         user_image = os.path.join(app.config['UPLOAD_FOLDER'], '07.jpg')
-        return render_template('tables.html',  name="yjf", lst_score = lst_score, user_image = user_image, lst_image_name=lst_image_name)
+        return render_template('tables.html',  name="yjf", lst_score = lst_score, user_image = user_image, lst_image_name=lst_image_path)
     return flask.jsonify(result)
 
  
