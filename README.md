@@ -1,8 +1,10 @@
 # How To Start Server 
 ## 1. install docker 
+Please open the official website of docker and follow the prompts to install docker.
+The official website of docker is as follows https://docs.docker.com/desktop/mac/install/. 
 ## 2. Start Containers 
 ### Choose Local Path
-Download the homework compressed package and extract it to a local directory.
+Download the compressed file in the mail and extract it to a local directory.
 e.g. My local directory is /Users/yangjiangfeng/01_icode/leetcode/baidu/personal-code/homework_yjf/scripts. 
 
 ### start container
