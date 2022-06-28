@@ -23,6 +23,7 @@ The client usage method is shown in the figure.
 ![image](https://github.com/yjfdl123/image_classify/blob/main/data/images/client_help.png)
 
 Here I will do a manual demonstration.
+![image](https://github.com/yjfdl123/image_classify/blob/main/data/images/client_example.png)
 
 
 ## Webserver API
@@ -42,6 +43,33 @@ a. Returns all predictions history saved in the database.
 5. /upload_image route thant 
 a. upload image with label to train the model
 ![image](https://github.com/yjfdl123/image_classify/blob/main/data/images/code_of_webserver.png)
+
+### Process of predict
+1. The client initiates a post request to the server and uploads a picture
+2. After the server receives the image, it first uses the existing model to score the image
+3. Save the image/model version and score to the database
+4. Finally return the score of the picture
+
+### Process of upload_image
+1. The client initiates a request, uploads a picture, and attaches the label of the picture
+2. After the server receives the picture with the label, it stores the picture and stores it in the corresponding label folder
+3. After processing, return the result
+
+### Process of train 
+1. The client initiates a request, asking the server to retrain the model
+2. The server calls the api of the model class, and uses the uploaded positive and negative image collection to fine-tune the model
+3. and store the version of the model into the database
+4. After the model training is completed, return to the corresponding
+
+### Process of metadata 
+1. The client initiates a request for metadata to the server
+2. After the server receives the metadata request, it finds all version information of the model from the database
+3. Concatenate the version information of the model and return it to the client
+
+### Process of history 
+1. The client initiates a request to the server for history
+2. After receiving the history request, the server finds the historical scoring information of the picture from the database
+3. Splicing the scoring information of the picture together and returning it to the client
 
 
 
