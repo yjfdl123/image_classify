@@ -18,6 +18,12 @@ To reduce model complexity, we use mobilenet for image prediction.<br>
 5. External control variables in file config.py.
 ![image](https://github.com/yjfdl123/image_classify/blob/main/data/images/code_of_all_server.png)
 
+## Client Use Method
+The client usage method is shown in the figure.
+![image](https://github.com/yjfdl123/image_classify/blob/main/data/images/client_help.png)
+
+Here I will do a manual demonstration.
+
 
 ## Webserver API
 We use flask as webserver and provide 5 routes.<br>
